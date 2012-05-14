@@ -1,0 +1,23 @@
+==test env==
+mac book air snb ultra low volt i5
+ruby memcached gem + localhost memcache(512MB) via port 11211
+
+
+==results==
+===memcached results===
+1. memcached performance: 1M insert items cost around 60second, around 16k insertion per second. and cpu usage ~ 30%
+2. memory for very simple item (1m Records) around 100MB, 64byte key + 2 byte item cost around 160MB
+3. read cost around the same time vs write. Hashing is probably very costly in memcached.
+
+
+===md5 / sha2 comparison===
+m5 around half of the computational time and half of the memory cost.
+
+
+===ruby loop is very fast===
+1M loop around 0.2 second
+
+
+
+==further work==
+try diff ruby memecache gem. try on linux and other env.
